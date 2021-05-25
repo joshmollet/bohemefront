@@ -1,0 +1,19 @@
+<div style="margin-top: 20px;">
+  <div *ngFor="let mydata of produit">
+    <h1 style="text-align: center;">{{mydata.name}}</h1>
+    <div class="main">
+      <div class="child">
+        <p><a href={{mydata.image_url}} class="zoom" id="target" title={{mydata.name}}><img src={{mydata.image_url}} style='height:300px'/></a></p>
+      </div>
+      <div class="child">
+        <p>{{mydata.description}}</p>
+        <p>{{mydata.price}}€</p>
+        <button class="btn btn-success espace" style="height: 50px;">Acheter</button>
+        <button class="btn btn-success espace panier" id="panier" style="height: 50px;" (click)='funalert()' ><img src="../../../assets/img/panier.png" style="height: 30px; filter:invert(1)">  Ajouter au panier</button>
+<!-- A MODIFIER POUR ADMIN--><a routerLink='edit'><button class="btn btn-success espace" style="height: 50px;">Modifier</button></a>
+      </div>
+    </div>
+  </div>  
+</div>
+<script>
+</script>

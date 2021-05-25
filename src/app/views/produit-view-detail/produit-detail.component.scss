@@ -1,0 +1,19 @@
+.main{
+    display: flex;
+}
+
+.child{
+    flex: auto;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+}
+
+.espace{
+    margin: 10px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}

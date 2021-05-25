@@ -1,0 +1,7 @@
+<div class='main' style="margin-top: 20px;">
+  <div class='flex-wra prod' *ngFor="let mydata of produits" routerLink={{mydata.id}}>
+    <p><img src={{mydata.image_url}} style='height:150px'/></p>
+    <p>{{mydata.name}}</p>
+    <p>{{mydata.price}}€</p>
+  </div>  
+</div>

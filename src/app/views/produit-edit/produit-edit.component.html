@@ -1,0 +1,76 @@
+<!-- <div>    
+    <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" id="id" class="form-control" name="id" value={{produit.id}} >
+        
+        <label for="id">Nom</label>
+        <input type="text" id="nom" class="form-control" name="nom" value={{produit.name}} >
+        
+        <label for="id">Description</label>
+        <input type="text" id="description" class="form-control" name="description" value={{produit.description}} >
+        
+        <label for="id">Stock</label>
+        <input type="text" id="stock" class="form-control" name="stock" value={{produit.stock}} >
+        
+        <label for="id">Prix</label>
+        <input type="text" id="price" class="form-control" name="price" value={{produit.price}} >
+        
+        <label for="id">URL de l'image</label>
+        <input type="text" id="image_url" class="form-control" name="image_url" value={{produit.image_url}} >
+        
+        <label for="id">Type</label>
+        <select name="type_id" id="type_id">
+            <option value="1" [attr.selected]="type==1 ? '' : null">Robe</option>
+            <option value="2" [attr.selected]="type==2 ? '' : null">Bas</option>
+            <option value="3" [attr.selected]="type==3 ? '' : null">Haut</option>
+            <option value="4" [attr.selected]="type==4 ? '' : null">Chaussures</option>
+            <option value="5" [attr.selected]="type==5 ? '' : null">Accessoires</option>
+        </select>
+        
+    </div>
+        <button class="btn btn-primary" type="submit" (click)="onSubmit()">Enregistrer</button>
+</div> -->
+
+
+<!------------------------------------------>
+
+<div class="col-sm-8 col-sm-offset-2">
+    <form [formGroup]="produitForm" (ngSubmit)="onSubmitForm()">
+      <div class="form-group">
+        <label for="id">ID</label>
+        <input type="text" id="id" class="form-control" formControlName="id">
+      </div>
+      <div class="form-group">
+        <label for="name">Nom</label>
+        <input type="text" id="name" class="form-control" formControlName="name">
+      </div>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" id="description" class="form-control" formControlName="description">
+      </div>
+      <div class="form-group">
+        <label for="stock">Stock</label>
+        <input type="text" id="stock" class="form-control" formControlName="stock">
+      </div>
+      <div class="form-group">
+        <label for="price">Prix</label>
+        <input type="text" id="price" class="form-control" formControlName="price">
+      </div>
+      <div class="form-group">
+        <label for="image_url">URL de l'image</label>
+        <input type="text" id="image_url" class="form-control" formControlName="image_url">
+      </div>
+
+      <div class="form-group">
+        <label for="type_id">Type</label>
+        <select id="type_id" class="form-control" formControlName="type_id">
+          <option value="1">Robe</option>
+          <option value="2">Bas</option>
+          <option value="3">Haut</option>
+          <option value="4">Chaussures</option>
+          <option value="5">Accessoires</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary">Soumettre</button>
+    </form>
+  </div>
